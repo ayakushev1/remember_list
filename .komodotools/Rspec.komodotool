@@ -1,0 +1,9 @@
+{
+  "keyboard_shortcut": "", 
+  "version": "1.0.11", 
+  "type": "URL", 
+  "name": "Rspec", 
+  "value": [
+    "http://rubydoc.info/gems/rspec-rails/frames"
+  ]
+}

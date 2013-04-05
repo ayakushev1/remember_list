@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag "application" %>
+    <%= render "layouts/stylesheets" %>  </head>
+    <%= javascript_include_tag "application" %>
+  </head>
+  <body>
+    <div id="bodyContainer" class="bodyContainer">
+      <aside><%= render "layouts/header" %></aside>
+      
+      <div id="contentContainer" class="contentContainer">
+        <aside><%= render "layouts/filter" %></aside>
+        
+        <section>
+          <%= yield %>    
+        </section>
+        
+        <%= render :partial => "layouts/preview", :object => @remember %>      
+      </div>
+      
+      <%= render "layouts/footer" %>
+    </div>
+  </body>
+</html>
+

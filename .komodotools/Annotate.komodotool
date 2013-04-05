@@ -1,0 +1,9 @@
+{
+  "keyboard_shortcut": "", 
+  "version": "1.0.11", 
+  "type": "URL", 
+  "name": "Annotate", 
+  "value": [
+    "http://rdoc.info/github/kucaahbe/annotated-rails/frames"
+  ]
+}

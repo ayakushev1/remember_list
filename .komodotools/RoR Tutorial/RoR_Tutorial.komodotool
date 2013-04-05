@@ -1,0 +1,9 @@
+{
+  "keyboard_shortcut": "", 
+  "version": "1.0.11", 
+  "type": "URL", 
+  "name": "RoR Tutorial", 
+  "value": [
+    "http://russian.railstutorial.org/chapters/beginning#main_content"
+  ]
+}

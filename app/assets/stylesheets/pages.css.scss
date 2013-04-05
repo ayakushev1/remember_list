@@ -1,0 +1,55 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$mainBackground: #fff;
+$borderRadius: 10px;
+
+/* Main body */
+body {
+    background: #cff;
+    .bodyContainer {
+      width: 100%;  
+      max-width: 900px;
+      min-width: 500px;
+      margin: 0 auto;
+    }
+    header {
+      padding-top: 5px;
+      background: $mainBackground;
+      border-radius: $borderRadius;
+      img {
+        padding: 1em;
+        width: 20%;
+        height: auto;
+        float: left;
+      }
+      div {
+        padding-top: 1em;
+        h1 {
+          font-size: 100%;
+        }  
+      }
+      nav {
+        float: right;
+        margin-right: 5%;
+        display:  inline;
+      }
+      .clear {
+        clear: both;
+      }
+    }
+    section {
+      margin-top: 1em;
+      font-size: 120%;
+      padding: 20px;
+      background: $mainBackground;
+      border-radius: $borderRadius;
+    }
+    footer {
+      background: $mainBackground;    
+      border-radius: $borderRadius;
+      padding: 1em;
+      margin-top: 1em;
+    }
+}

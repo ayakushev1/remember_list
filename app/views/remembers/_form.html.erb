@@ -1,0 +1,56 @@
+<%= form_for(@remember) do |f| %>
+  <% if @remember.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@remember.errors.count, "error") %> prohibited this remember from being saved:</h2>
+
+      <ul>
+      <% @remember.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="rememberEditItem">
+    <div>
+      <div class="rememberEditItemLabel"><%= f.label :name %>: </div>
+      <div class="rememberEditItemField"><%= f.text_field :name %></div><div class="clear"></div>
+    </div>
+    <div>
+      <div class="rememberEditItemLabel"><%= f.label :tags %></div>
+      <div class="rememberEditItemField"><%= f.text_field :tags %></div>
+      <div class="clear"></div>
+    </div>
+    <div>
+      <div class="rememberEditItemLabel"><%= f.label :short_desc %></div>
+      <div class="rememberEditItemField"><%= f.text_area :short_desc, :size => "10x5" %></div>
+      <div class="clear"></div>
+    </div>
+    <div>
+      <div class="rememberEditItemLabel"><%= f.label :full_desc %></div>
+      <div class="rememberEditItemField"><%= f.text_area :full_desc, :size => "60x12" %></div>
+      <div class="clear"></div>
+    </div>
+    <div>
+      <div class="rememberEditItemLabel"><%= f.label :ref_type %></div>
+      <div class="rememberEditItemField"><%= f.select :ref_type, ["Internet", "File"] %></div>
+      <div class="clear"></div>
+    </div>
+    <div>
+      <div class="rememberEditItemLabel"><%= f.label :ref_name %></div>
+      <div class="rememberEditItemField"><%= f.text_field :ref_name %></div>
+      <div class="clear"></div>
+    </div>
+    <div>
+      <div class="rememberEditItemLabel"><%= f.label :active %></div>
+      <div class="rememberEditItemField"><%= f.check_box :active %></div>
+      <div class="clear"></div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %><br>
+    </div>
+    <div class="clear"></div>
+  </div>
+<% end %>
+

@@ -1,0 +1,9 @@
+{
+  "keyboard_shortcut": "", 
+  "version": "1.0.11", 
+  "type": "URL", 
+  "name": "Webrat", 
+  "value": [
+    "http://rdoc.info/github/brynary/webrat/master/frames"
+  ]
+}

@@ -1,0 +1,139 @@
+// Place all the styles related to the Remembers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Remember list */
+@mixin RememberMenuItem {
+    padding-right: 2px;
+    text-align: center;
+    font-size: 85%;
+    color: #888;
+    background-color: #eee;
+    border-radius: 3px;
+    border-color: #666;
+    border-width: 2px;
+    width: 6em;
+}
+
+@mixin RememberLongDesc {
+    text-align: justify;
+    margin-top: 12px;
+    padding-top: 6px;
+    background-color: #fafafa;
+    font-size: 75%;
+    max-height: 5em;
+    overflow: auto;
+    line-height: 1.2;
+}
+
+.rememberList {
+    .rememberListPaginate {
+        letter-spacing: 0.1em;
+        width: 60%;
+        margin: auto;
+    }
+    .remembersCaption {
+        font-size: 100%;
+        font-weight: bold;
+        margin: 6px;
+    }
+    .rememberListItem {
+        margin-top: 12px;
+        padding: 2px;
+        
+        .rememberListItemName {
+            margin-bottom: 6px;
+        }
+        .rememberListItemMain {
+            width: 65%;
+            float: left;
+            a {font-size: 85%;}
+        }
+        .rememberListMenu {
+            width: 35%;
+            float: left;
+            text-align: right;
+            word-spacing: 0.2em;
+            a {
+                @include RememberMenuItem;
+            }
+        }
+        .clear {
+            clear: both;
+        }
+        .rememberListItemDesc {
+            @include RememberLongDesc;
+            max-height: 5em;
+        }
+    }
+    .rememberListItemBreak{
+        height: 1px;
+        background-color: #aaa;
+    }
+    
+}
+
+/* Remember Show one item */
+.rememberShowItem {
+    div {
+        margin-bottom: 12px;
+        text-align: justify;
+    }
+    .RememberShowMenu {
+        @extend .RememberListMenu;
+        a {
+            @include RememberMenuItem;
+        }
+    }
+    .rememberShowItemFullDesc, .rememberShowItemShortDesc {
+        @include RememberLongDesc;
+        max-height: 25em;
+    }
+}
+
+/* Remember Edit one item */
+@mixin EditItems {
+    width: 75%;
+    float: left;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #000;
+    margin-left: 10px;
+    font-size: 75%;
+    text-align: left;
+    overflow: auto;
+}
+.rememberEditItem {
+    div {
+        margin-bottom: 5px;
+        text-align: justify;
+        .rememberEditItemLabel {
+            width: 20%;
+            float: left;
+            @include RememberMenuItem;
+            text-align: left;
+        }
+        .rememberEditItemField input,
+        .rememberEditItemField textarea,
+        .rememberEditItemField select,
+        .rememberEditItemField check_box {
+            @include EditItems;
+        }
+        .clear {
+            clear: both;
+        }
+    }
+
+    .actions input {
+        width: auto;
+        border-radius: 4px;
+        border-width: 1px;
+        border-color: #000;
+    }
+    .RememberEditMenu {
+        @extend .RememberListMenu;
+        a {
+            @include RememberMenuItem;
+        }
+    }
+
+}

@@ -1,0 +1,21 @@
+<div class=rememberShowItem>
+  <div id="notice"><%= notice %></div>
+  <div class=RememberShowMenu>
+    <a><%= link_to "Edit", edit_remember_path(@remember) %></a>
+    <a><%= link_to "Back", remembers_path %></a>
+  </div>
+  
+  <div><b>Name: </b><a href=<%= @remember.ref_name%> ><%= @remember.name %></a></div>
+  <div><a><b>Tags: </b><%= @remember.tags %><a/></div>    
+  <div class=rememberShowItemShortDesc><b>Short Description: </b><%= @remember.short_desc %></div>
+  <div class=rememberShowItemFullDesc><b>Full Description: </b><%= @remember.full_desc %></div>
+  <div><b>Ref name: </b><a href=<%= @remember.ref_name %> ><%= @remember.ref_name %></a></div>
+  <div><b>Active: </b><%= @remember.active %></div>
+  <div><b>Ref type: </b><%= @remember.ref_type %></div>
+  
+  <div class=RememberShowMenu>
+    <a><%= link_to "Edit", edit_remember_path(@remember) %></a> |
+    <a><%= link_to "Back", remembers_path %></a>
+  </div>
+  
+</div>

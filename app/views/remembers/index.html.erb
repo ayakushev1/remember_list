@@ -1,0 +1,27 @@
+<div class=rememberList>
+    <div id="notice"><%= notice %></div>
+  <div class=rememberListPaginate><%= will_paginate %></div>
+  <div class=remembersCaption><a> </a></div>
+  <% @remembers.each do |remember| %>
+
+  <div class=rememberListItem>
+    <div class= rememberListItemName>Name: <a href=<%= remember.ref_name%> ><%= remember.name %></a></div>
+    <div class=rememberListItemMain>
+      <a>Tags: <%= remember.tags %><a/>
+    </div>
+    <div class=rememberListMenu>
+        <a><%= link_to "New", new_remember_path %></a>
+        <a><%= link_to "Show", remember %></a>
+        <a><%= link_to "Edit", edit_remember_path(remember) %></a>
+        <a><%= link_to "Destroy", remember, method: :delete, data: { confirm: "Are you sure?" } %></a>
+    </div>
+    <div class="clear"></div>  
+    <div class=rememberListItemDesc><%= remember.short_desc %></div>
+  </div>
+  <div class=rememberListItemBreak></div>
+
+  <% end %>
+  <div class=rememberListPaginate><%= will_paginate %></div>
+</div>
+
+
