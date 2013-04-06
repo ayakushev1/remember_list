@@ -34,7 +34,7 @@ group :test do
 end
 
 group :development do
-  gem'pg'	
+  gem 'pg'	
 end
 
 # Gems used only for assets and not required
