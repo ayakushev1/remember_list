@@ -33,7 +33,7 @@ group :test do
   gem 'spork', '0.9.2'
 end
 
-group :development do
+group :production do
   gem 'pg'	
 end
 
