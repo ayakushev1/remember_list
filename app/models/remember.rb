@@ -13,7 +13,7 @@ class Remember < ActiveRecord::Base
   
   attr_accessible :active, :full_desc, :name, :ref_name, :ref_type, :short_desc, :tags, :tag_id
 
-  belongs_to :tag
+  belongs_to :Tag
   
   before_save :tagscreate
 
