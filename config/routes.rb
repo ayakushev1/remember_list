@@ -2,7 +2,7 @@ RememberList::Application.routes.draw do
   resources :remembers
 
 
-  get "pages/home"
+  get 'pages/home'
   
 #  match '/', :to => 'pages#home' 
   match '/', :to => 'remembers#index' 
